@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import { addProduct } from "../../redux/actions/productAction";
+import addProductData from "../../redux/thunk/products/addProductData";
 
 
 const AddProduct = () => {
@@ -24,7 +25,7 @@ const AddProduct = () => {
     };
 
     console.log(product);
-    dispatch(addProduct())
+    dispatch(addProductData(product))
   };
 
   return (

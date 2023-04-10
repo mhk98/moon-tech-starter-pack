@@ -31,6 +31,10 @@ const productReducer = (state = initialState, action) => {
     case REMOVE_PRODUCT:
       return {
         ...state,
+        // products: state.products.filter(
+        //   (product) => product._id !== action.payload
+        // ),
+
         products: state.products.filter(
           (product) => product._id !== action.payload
         ),
